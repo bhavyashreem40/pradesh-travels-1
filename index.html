@@ -1,136 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>PRADESH TRAVELS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-
-        header {
-            background-color: #1e3a8a;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        section {
-            padding: 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        h2 {
-            color: #1e3a8a;
-        }
-
-        .services, .places {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }
-
-        .card {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        footer {
-            background-color: #1e3a8a;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 20px;
-        }
-
-        .contact-box {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pradesh Travels</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+header {
+  text-align: center;
+  padding: 20px;
+  background: #0a1f44;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+section { padding: 20px; }
+button, li {
+  padding: 12px;
+  margin: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button {
+  border: none;
+  background: #1e3c72;
+  color: white;
+}
+button:hover { background: #2a5298; }
+li {
+  background: #112d4e;
+  list-style: none;
+  max-width: 300px;
+}
+li:hover { background: #1b3a6b; }
+form input {
+  display: block;
+  margin: 12px 0;
+  padding: 12px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  border: none;
+}
+form button { background: #1e3c72; }
+.contact {
+  background: #0a1f44;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+</style>
 </head>
-
 <body>
 
 <header>
-    <h1>PRADESH TRAVELS</h1>
-    <p>Comfortable,minimum cost & Reliable Travel to Holy Pilgrimage & Tourist Places in South India</p>
+<h1>PRADESH TRAVELS</h1>
+<p>Comfortable, minimum cost & Reliable Travel to Holy Pilgrimage & Tourist Places in South India</p>
 </header>
 
 <section>
-    <h2>About Us</h2>
-    <p>
-        PRADESH TRAVELS offers safe and affordable travel services by
-        <b>Flight, Bus, Train, Van, and Car</b> to holy pilgrimage destinations and
-        popular tourist places across South India.
-    </p>
+<h2>About Us</h2>
+<p>PRADESH TRAVELS offers safe and affordable travel services by Flight, Bus, Train, Van, and Car.</p>
+
+<h2>Our Travel Services</h2>
+<button onclick="openForm('', 'Flight')">✈️ Flight</button>
+<button onclick="openForm('', 'Bus')">🚌 Bus</button>
+<button onclick="openForm('', 'Train')">🚆 Train</button>
+<button onclick="openForm('', 'Van')">🚐 Van</button>
+<button onclick="openForm('', 'Car')">🚗 Car</button>
 </section>
 
 <section>
-    <h2>Our Travel Services</h2>
-    <div class="services">
-        <div class="card">✈️ Flight</div> 
-        <div class="card">🚌 Bus</div>
-        <div class="card">🚆 Train</div>
-        <div class="card">🚐 Van</div>
-        <div class="card">🚗 Car</div>
-    </div>
+<h2>Holy Pilgrimage Destinations</h2>
+<ul>
+<li onclick="openForm('Mantralaya')">🙏 Mantralaya</li>
+<li onclick="openForm('Tirupati')">🙏 Tirupati</li>
+<li onclick="openForm('Madeshwara Betta')">🙏 Madeshwara Betta</li>
+<li onclick="openForm('Kukke Subramanya')">🙏 Kukke Subramanya</li>
+<li onclick="openForm('Srirangam')">🙏 Srirangam</li>
+<li onclick="openForm('Rameshwaram')">🙏 Rameshwaram</li>
+<li onclick="openForm('Any Other Place')">📍 ANY OTHER PLACE</li>
+</ul>
+
+<h2>Tourist Places</h2>
+<ul>
+<li onclick="openForm('Ooty')">🌄 Ooty</li>
+<li onclick="openForm('Kanyakumari')">🌊 Kanyakumari</li>
+<li onclick="openForm('Coorg')">🏞️ Coorg</li>
+<li onclick="openForm('Wayanad')">🌴 Wayanad</li>
+<li onclick="openForm('Pondicherry')">🏖️ Pondicherry</li>
+<li onclick="openForm('Any Other Place')">📍 ANY OTHER PLACE</li>
+</ul>
 </section>
 
-<section>
-    <h2>Holy Pilgrimage Destinations</h2>
-    <div class="places">
-        <div class="card">🙏 Mantralaya</div>
-        <div class="card">🙏 Tirupati</div>
-        <div class="card">🙏 Madeshwara Betta</div>
-        <div class="card">🙏 Kukke Subramanya</div>
-        <div class="card">🙏 Srirangam</div>
-        <div class="card">🙏 Rameshwaram</div>
-        <div class="card"> MANY OTHERS - wherever you want to go!</div>
-        <div class="card"> Just CALL/MESSAGE to the number given below</div>
-    </div>
+<section id="formSection">
+<h2>Enquiry Form</h2>
+<form onsubmit="sendWhatsApp(event)">
+<input type="text" id="name" placeholder="Name" required>
+<input type="text" id="place" placeholder="Place" required>
+<input type="text" id="transport" placeholder="Mode of Transport" required>
+<input type="date" id="date" required>
+<input type="tel" id="phone" placeholder="Phone Number" required>
+<button type="submit">Send Enquiry</button>
+</form>
 </section>
 
-<section>
-    <h2>Tourist Places in South India</h2>
-    <div class="places">
-        <div class="card">🌄 Ooty</div>
-        <div class="card">🌊 Kanyakumari</div>
-        <div class="card">🏞️ Coorg</div>
-        <div class="card">🌴 Wayanad</div>
-        <div class="card">🏖️ Pondicherry</div>
-        <div class="card"> MANY OTHERS - wherever you want to go!</div>
-        <div class="card"> Just CALL/MESSAGE to the number given below</div>
-    </div>
+<section class="contact">
+<h2>Contact Us</h2>
+<p>PHONE NUMBER: XXXXXXXXXX (OWNER NAME)</p>
+<p>ALTERNATE NUMBER: YYYYYYYYYY (OWNER NAME)</p>
 </section>
 
-<section>
-    <h2>Contact Us</h2>
-    <div class="contact-box">
-        <p><b>Owner Name 1:</b> MADESH</p>
-        <p><b>Owner Name 2:</b> PREMA</p>
-        <p><b>Phone Number:</b> +91 9686358591</p>
-        <p><b>Alternate Phone:</b> +91 7019024635</p>
-    </div>
-</section>
+<script>
+function openForm(place = '', transport = '') {
+  document.getElementById('formSection').scrollIntoView({ behavior: 'smooth' });
 
-<footer>
-    <p>© 2026 PRADESH TRAVELS | All Rights Reserved</p>
-</footer>
+  if (place) {
+    document.getElementById('place').value = place;
+  }
+  if (transport) {
+    document.getElementById('transport').value = transport;
+  }
+}
+
+function sendWhatsApp(event) {
+  event.preventDefault();
+
+  let name = document.getElementById('name').value;
+  let place = document.getElementById('place').value;
+  let transport = document.getElementById('transport').value;
+  let date = document.getElementById('date').value;
+  let phone = document.getElementById('phone').value;
+
+  let message = `New Enquiry:%0AName: ${name}%0APlace: ${place}%0AMode: ${transport}%0ADate: ${date}%0APhone: ${phone}`;
+
+  let ownerNumber = "91XXXXXXXXXX";
+
+  window.open(`https://wa.me/${ownerNumber}?text=${message}`, '_blank');
+}
+</script>
 
 </body>
 </html>
-
-
-
-
-
